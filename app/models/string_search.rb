@@ -1,0 +1,2 @@
+class StringSearch < ApplicationRecord
+end

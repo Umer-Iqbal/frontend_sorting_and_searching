@@ -1,0 +1,2 @@
+class StringPlusIntegerValue < ApplicationRecord
+end
