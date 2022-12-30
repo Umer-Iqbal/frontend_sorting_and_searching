@@ -35,38 +35,3 @@
     display: inline-block;
   }
 }
-
-.image-wrapper {
-  display: flex;
-  justify-content: space-around;
-
-  span{
-    width: 150px;
-    height: 200px;
-    display: inline-block;
-    transform: rotateY(63deg);
-    img{
-      width: 100%;
-    }
-  }
-
-  span:hover{
-    animation-name: example;
-    background-color: green;
-    animation: rotation 2s infinite linear;
-    //transform: unset !important;
-  }
-
-  @keyframes rotation {
-
-    from {
-      transform: rotateY(63deg);
-    }
-    to {
-      transform: rotateY(0deg);
-    }
-
-    //from {transform: rotateY(63deg) !important;}
-    //to {transform: rotateY(0deg) !important;}
-  }
-}

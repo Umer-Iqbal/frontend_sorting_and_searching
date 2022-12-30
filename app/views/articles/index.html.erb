@@ -1,10 +1,8 @@
-<span data-controller="search-sort">
-      <input class="rounded-2 border" data-action="keyup->search-sort#searchValue" placeholder="Search">
-    </span>
-
 <div class="list-wrapper">
-  <div class="search-parent">
-    <div class="dropdown" data-controller="search-sort">
+  <div class="search-parent" data-controller="search-sort">
+    <h3>String + Integer Searching</h3>
+
+    <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownStringSort" data-bs-toggle="dropdown" aria-expanded="false">
         Sort
       </button>
@@ -12,58 +10,11 @@
         <li><span class="dropdown-item" data-action="click->search-sort#ascendingSort">Ascending sort</span></li>
         <li><span class="dropdown-item" data-action="click->search-sort#descendingSort">Decending sort</span></li>
       </ul>
-    </div>
-    <h3>String Searching</h3>
-    <div class="value-wrapper"  data-controller="search" data-search-target="stringValuesWrapper">
-      <%= render partial: "string_value", collection: @string_values, as: :string_value %>
-    </div>
-  </div>
-
-
-  <div class="search-parent">
-
-    <div class="dropdown" data-controller="sort">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownStringSort" data-bs-toggle="dropdown" aria-expanded="false">
-        Sort
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownStringSort">
-        <li><span class="dropdown-item" data-action="click->sort#ascendingSort">Ascending sort</span></li>
-        <li><span class="dropdown-item" data-action="click->sort#descendingSort">Decending sort</span></li>
-      </ul>
+      <input class="rounded-2 border p-1 m-1" data-action="keyup->search-sort#searchValue" placeholder="Search">
     </div>
 
-
-
-    <h3>Integer Searching</h3>
-    <div class="value-wrapper" data-controller="search" data-search-target="integerValuesWrapper">
-      <%= render partial: "int_value", collection: @integer_values, as: :integer_value %>
-    </div>
-  </div>
-  <div class="search-parent">
-    <h3>String + Integer Searching</h3>
-    <div class="value-wrapper">
+    <div class="value-wrapper" data-search-sort-target="elementsWrapper">
       <%= render partial: "string_plus_int_values", collection: @string_plus_integer_values, as: :string_plus_integer_value %>
     </div>
   </div>
-
-
-  <div class="search-parent">
-    <h3>Date Searching</h3>
-  </div>
-  <div class="search-parent">
-    <h3>Date Sorting</h3>
-  </div>
-  <div class="search-parent">
-    <h3>String Sorting</h3>
-  </div>
-  <div class="search-parent">
-    <h3>Integer Sorting</h3>
-  </div>
-  <div class="search-parent">
-    <h3>String + Integer Sorting</h3>
-  </div>
-</div>
-
-<div class="image-wrapper">
-  <span><%= image_tag "king.jpg" %></span>
 </div>
